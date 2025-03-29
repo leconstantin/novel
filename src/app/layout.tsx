@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-
+import "@/styles/prosemirror.css";
 const title =
   "Novel – Notion-style WYSIWYG editor with AI-powered autocompletions";
 const description =

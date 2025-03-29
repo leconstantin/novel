@@ -12,6 +12,7 @@ import { Markdown } from "tiptap-markdown";
 import Highlight from "@tiptap/extension-highlight";
 
 import { InputRule } from "@tiptap/core";
+import SlashCommand from "./slash-command";
 
 export const TiptapExtensions = [
   StarterKit.configure({
@@ -98,10 +99,11 @@ export const TiptapExtensions = [
       if (node.type.name === "heading") {
         return `Heading ${node.attrs.level}`;
       }
-      return "Press '/' for commands, or '++' for AI autocomplete...";
+      return "Press '/' for commands";
     },
     includeChildren: true,
   }),
+  SlashCommand,
   TiptapUnderline,
   TextStyle,
   Color,
